@@ -87,3 +87,12 @@ git commit -m "first commit"
 git branch -M master
 git remote add origin https://github.com/henhenmuldani/reactjs-film.git
 git push -u origin master
+
+react-scripts build
+build
+
+npm install netlify-cli -g
+netlify deploy
+Choose build as the path to deploy
+To support pushState, make sure to create a public/_redirects file with the following rewrite rules:
+/*  /index.html  200
