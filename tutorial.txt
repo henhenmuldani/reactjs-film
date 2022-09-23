@@ -1,0 +1,89 @@
+1. npx create-react-app reactjs-film
+2. untuk running, npm start
+3. lihat package.json, isinya kumpulan script dan dependency yg diinstall
+4. install bootstrap
+5. npm install react-bootstrap bootstrap
+6. dokumentasi https://react-bootstrap.github.io/getting-started/introduction/
+7. copas ke index.js
+    - import 'bootstrap/dist/css/bootstrap.min.css';
+8. copas ke public/index.html diatas </body>
+    <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+    <script
+    src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+    crossorigin></script>
+    <script
+    src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+    crossorigin></script>
+    <script>var Alert = ReactBootstrap.Alert;</script>
+9.  mainkan App.js
+10. buat folder components di dalam src
+11. buat file di folder components
+    - NavigationBar.js
+    - Intro.js
+    - Superhero.js
+    - Trending.js
+12. mulai dari NavigationBar.js
+13. buat fungsi component dengan gaya ES6 di NavigationBar.js
+    import { Navbar, Nav, Container } from "react-bootstrap";
+
+    const NavigationBar = () => {
+    return (
+        <div>
+        <Navbar>
+            <Container>
+            <Navbar.Brand>React Film</Navbar.Brand>
+            <Nav>
+                <Nav.Link>TRENDING</Nav.Link>
+                <Nav.Link>SUPERHERO</Nav.Link>
+            </Nav>
+            </Container>
+        </Navbar>
+        </div>
+    );
+    };
+
+    export default NavigationBar;
+14. buka App.js panggil NavigationBar
+    - import NavigationBar from "./components/NavigationBar";
+15. panggil <NavigationBar />
+16. buat folder style di src untuk custom css
+17. buat folder assets di src untuk sgela macam aset yg akan dipakai
+18. lanjut bikin komponen yg lain
+
+// tips comot codingan urg
+1. buka github
+2. cari repo
+3. cek branch mana kodingannya
+4. copy https nya
+5. buka git bash
+6. git clone (url dari github)
+7. jika kosong git fetch
+8. git checkout (branch yg ingin dibuka)
+9. buka lewat vs code
+10. liat package.json butuh install apa aja seperti node.js dll 
+11. ketik npm install untuk menginstall node module
+
+//fetch api dari moviedb
+1. https://developers.themoviedb.org/3/getting-started/introduction
+2. 8566f8042cc92c745cfb9d57184f73ad
+    https://api.themoviedb.org/3/movie/550?api_key=8566f8042cc92c745cfb9d57184f73ad
+3. buka TRENDING
+4. hapus col sisakan 1 biji
+5. bikin file baru .env
+6. buat key dan base url
+    REACT_APP_TMDB_KEY=8566f8042cc92c745cfb9d57184f73ad
+    REACT_APP_BASE_URL=https://api.themoviedb.org/3
+7. install axios npm install axios --save
+8. kalo mau pakai jan lupa 
+    - import axios from "axios"
+9. tambahkan import {useEffect, useState} from "react" untuk bermain data 
+10.
+11.
+
+//deploy ke netlify
+git init
+git add .
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/henhenmuldani/reactjs-film.git
+git push -u origin master
